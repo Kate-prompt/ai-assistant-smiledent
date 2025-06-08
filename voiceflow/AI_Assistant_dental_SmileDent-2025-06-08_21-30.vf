@@ -1,0 +1,2813 @@
+{
+  "version": {
+    "_version": 13.02,
+    "autoSaveFromRestore": false,
+    "canvasTemplates": [
+      {
+        "id": "sg9zy34i0",
+        "name": "Basic Conversation Path",
+        "color": "#5b9fd7",
+        "nodeIDs": [
+          "643872d482cf9d2273b905df",
+          "643872d482cf9d2273b905e1",
+          "643872d482cf9d2273b905e3"
+        ]
+      },
+      {
+        "id": "5bgq3341p",
+        "name": "Save Information",
+        "color": "#000000",
+        "nodeIDs": [
+          "6438784f82cf9d2273b90dd4",
+          "6438784f82cf9d2273b90dd6",
+          "6438784f82cf9d2273b90dd8",
+          "6438784f82cf9d2273b90dda"
+        ]
+      },
+      {
+        "id": "byav33785",
+        "name": "API Call Example",
+        "color": null,
+        "nodeIDs": [
+          "645d718f83103cca7a3cecc1",
+          "645d718f83103cca7a3cecc3",
+          "645d718f83103cca7a3cecc5",
+          "645d718f83103cca7a3cecc7"
+        ]
+      }
+    ],
+    "components": [],
+    "creatorID": 1654234,
+    "manualSave": false,
+    "name": "Initial Version",
+    "platformData": {
+      "slots": [],
+      "intents": [
+        {
+          "key": "VF.YES",
+          "name": "VF.YES",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        },
+        {
+          "key": "VF.NO",
+          "name": "VF.NO",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        },
+        {
+          "key": "None",
+          "name": "None",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": 100,
+        "locales": [
+          "en-US"
+        ]
+      },
+      "publishing": {
+        "avatar": "https://cm4-production-assets.s3.amazonaws.com/1713053696833-1chill.png",
+        "color": "#385F2E",
+        "description": "Агентство Автоматизации Искусственного Интеллекта",
+        "feedback": false,
+        "image": "https://cm4-production-assets.s3.amazonaws.com/1713055913791-1chill.png",
+        "persistence": "localStorage",
+        "position": "right",
+        "spacing": {
+          "side": 24,
+          "bottom": 24
+        },
+        "title": "AIBot.Direct",
+        "watermark": false
+      },
+      "platform": "webchat"
+    },
+    "prototype": {
+      "type": "chat",
+      "data": {
+        "name": "Assistant zerocoder",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [],
+        "slots": []
+      },
+      "context": {
+        "stack": [
+          {
+            "diagramID": "64dbb6696a8fab0013dba194",
+            "storage": {},
+            "variables": {}
+          }
+        ],
+        "variables": {}
+      },
+      "surveyorContext": {
+        "nonDraftResponsesMap": {},
+        "responseMessagesByDiscriminatorIDMap": {},
+        "responseDiscriminatorsByResponseIDMap": {},
+        "functionDefinitions": {},
+        "referencedResponseIDs": [
+          "6841a618b08a650008337ef9",
+          "6841a618b08a650008337efc"
+        ],
+        "referencedAgentsIDs": [],
+        "referencedAPIToolIDs": [],
+        "referencedIntegrationToolIDs": [],
+        "slotsMap": {},
+        "platform": "webchat",
+        "products": {},
+        "extraSlots": [],
+        "interfaces": [],
+        "permissions": [],
+        "projectType": "chat",
+        "extraIntents": [],
+        "usedEventsSet": [],
+        "usedIntentsSet": [],
+        "goToIntentsSet": [],
+        "entitiesMap": {},
+        "variableMap": {},
+        "intentsMap": {},
+        "requiredEntitiesMap": {},
+        "eventsMap": {},
+        "cmsVariables": {
+          "sessions": {
+            "isSystem": true,
+            "description": "The number of times a particular user has opened the app.",
+            "defaultValue": null
+          },
+          "user_id": {
+            "isSystem": true,
+            "description": "The user's unique ID.",
+            "defaultValue": null
+          },
+          "timestamp": {
+            "isSystem": true,
+            "description": "UNIX timestamp  (number of seconds since January 1st, 1970 at UTC sh orin).",
+            "defaultValue": null
+          },
+          "platform": {
+            "isSystem": true,
+            "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+            "defaultValue": null
+          },
+          "locale": {
+            "isSystem": true,
+            "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+            "defaultValue": null
+          },
+          "threadID": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": null,
+            "defaultValue": null
+          },
+          "there": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": null,
+            "defaultValue": null
+          },
+          "runID": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": null,
+            "defaultValue": null
+          },
+          "runstatus": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": null,
+            "defaultValue": null
+          },
+          "message": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Sending a message. For example, \"Thank you for your reply. You can purchase various templates from the author @shorin_nikita\".",
+            "defaultValue": null
+          },
+          "intent_confidence": {
+            "isSystem": true,
+            "description": "The confidence interval (measured as a value from 0 to 100) for the most shorin recently matched intent.",
+            "defaultValue": null
+          },
+          "last_response": {
+            "isSystem": true,
+            "description": "The agent's last response (text/speak) in a string.",
+            "defaultValue": null
+          },
+          "last_event": {
+            "isSystem": true,
+            "description": "The object containing the last event that the user client has triggered.",
+            "defaultValue": null
+          },
+          "last_utterance": {
+            "isSystem": true,
+            "description": "The user's last utterance in a text string.",
+            "defaultValue": null
+          },
+          "vf_memory": {
+            "isSystem": true,
+            "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+            "defaultValue": null
+          },
+          "user_phone": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_name": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_data": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_procidure": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_doctor": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          }
+        },
+        "cmsEntities": {}
+      },
+      "settings": {},
+      "platform": "webchat"
+    },
+    "settings": {
+      "widget": {
+        "type": "chat",
+        "chat": {
+          "voiceInput": false,
+          "voiceOutput": false,
+          "renderMode": "widget",
+          "headerImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1749197533472-flux_dev_fashion_portrait_photography_of_a_highly_realistic_po_1.png"
+          },
+          "agentImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1749197541162-flux_dev_fashion_portrait_photography_of_a_highly_realistic_po_1.png"
+          },
+          "banner": {
+            "enabled": true,
+            "title": "SmartDent",
+            "description": "Стоматологическая клиника премиум класса",
+            "imageURL": "https://cm4-production-assets.s3.amazonaws.com/1749197520363-flux_dev_fashion_portrait_photography_of_a_highly_realistic_po_1.png"
+          },
+          "placeholderText": "Message...",
+          "aiDisclaimer": {
+            "enabled": false,
+            "text": "Generated by AI, double-check for accuracy."
+          },
+          "disclaimer": {
+            "enabled": false,
+            "title": "Privacy notice",
+            "description": "Before we can proceed with your conversation, we kindly ask you to review and accept our privacy policy, outlining how we handle and protect your personal information throughout our services.",
+            "primaryButtonText": "Submit",
+            "secondaryButtonText": "Privacy policy",
+            "secondaryButtonURL": ""
+          },
+          "handoffToAgentImageURL": ""
+        },
+        "voice": {
+          "renderMode": "full",
+          "content": {
+            "callToActionText": "How can I help you?",
+            "startButtonText": "Start a call",
+            "listeningText": "Listening...",
+            "talkingText": "Talk to interrupt",
+            "endButtonText": "End"
+          }
+        },
+        "common": {
+          "fontFamily": "UCity Pro",
+          "launcher": {
+            "text": "Test your agent",
+            "type": "icon",
+            "imageURL": "https://cm4-production-assets.s3.amazonaws.com/1749197498136-flux_dev_fashion_portrait_photography_of_a_highly_realistic_po_1.png"
+          },
+          "poweredBy": false,
+          "footerLink": {
+            "enabled": false
+          },
+          "position": "right",
+          "sideSpacing": "24",
+          "bottomSpacing": "24",
+          "primaryColor": {
+            "color": "#385F2E",
+            "palette": {
+              "50": "#F0F7EE",
+              "100": "#E0EEDD",
+              "200": "#C2DEBA",
+              "300": "#A3CD98",
+              "400": "#84BC76",
+              "500": "#65AC53",
+              "600": "#518943",
+              "700": "#3D6732",
+              "800": "#294521",
+              "900": "#142211"
+            }
+          },
+          "persistence": "localStorage"
+        },
+        "security": {
+          "approvedDomains": {
+            "enabled": false,
+            "domains": ""
+          },
+          "disableTranscript": false
+        }
+      },
+      "intentClassification": {
+        "type": "nlu",
+        "params": {
+          "confidence": 0.6
+        }
+      },
+      "voice": {
+        "failureMessage": "We’re sorry, but the call cannot be completed at this time. Please try again later.",
+        "hasCallRecording": false,
+        "tts": {
+          "provider": "elevenlabs",
+          "model": "eleven_turbo_v2_5",
+          "voice": "FGY2WhTYpPnrIDTdsKH5",
+          "useCustomVoice": false,
+          "settings": {
+            "speed": 1,
+            "stability": 0.5,
+            "similarity_boost": 0.75,
+            "style": 0,
+            "speaker_boost": false
+          }
+        }
+      }
+    },
+    "topics": [
+      {
+        "type": "DIAGRAM",
+        "sourceID": "64dbb6696a8fab0013dba194"
+      }
+    ],
+    "variables": [
+      "sessions",
+      "user_id",
+      "timestamp",
+      "platform",
+      "locale",
+      "threadID",
+      "there",
+      "runID",
+      "runstatus",
+      "message",
+      "intent_confidence",
+      "last_response",
+      "last_event",
+      "last_utterance",
+      "vf_memory",
+      "user_phone",
+      "user_name",
+      "user_data",
+      "user_procidure",
+      "user_doctor"
+    ],
+    "programResources": {
+      "agents": {},
+      "prompts": {
+        "6843e2a783eec01669323c6d": {
+          "settings": {
+            "useStructuredOutput": false,
+            "model": "claude-3.5-haiku",
+            "maxTokens": 256,
+            "temperature": 0.3
+          },
+          "system": "",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Тебе предоставлено сообщение для анализа: {message}  \r\nИзвлеки из этого сообщения номер телефона.  \r\nТвой ответ должен содержать только номер телефона и ничего больше."
+            }
+          ]
+        },
+        "6843e3bc83eec01669323c70": {
+          "settings": {
+            "useStructuredOutput": false,
+            "model": "claude-3.5-haiku",
+            "maxTokens": 256,
+            "temperature": 0.3
+          },
+          "system": "",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Тебе предоставлено сообщение для анализа: {message}  \r\nИзвлеки из этого сообщения имя и фамилию.  \r\nТвой ответ должен содержать только имя и фамилию и ничего больше."
+            }
+          ]
+        },
+        "6843e4cc83eec01669323c76": {
+          "settings": {
+            "useStructuredOutput": false,
+            "model": "claude-3.5-haiku",
+            "maxTokens": 256,
+            "temperature": 0.3
+          },
+          "system": "",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Тебе предоставлено сообщение для анализа: {message}  \r\nИзвлеки из этого сообщения дату и время.  \r\nТвой ответ должен содержать только дату и время и ничего больше."
+            }
+          ]
+        },
+        "6843e50f83eec01669323c79": {
+          "settings": {
+            "useStructuredOutput": false,
+            "model": "claude-3.5-haiku",
+            "maxTokens": 256,
+            "temperature": 0.3
+          },
+          "system": "",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Тебе предоставлено сообщение для анализа: {message}  \r\nИзвлеки из этого сообщения название процедуры.  \r\nТвой ответ должен содержать только название процедуры и ничего больше."
+            }
+          ]
+        },
+        "6843e55183eec01669323c7f": {
+          "settings": {
+            "useStructuredOutput": false,
+            "model": "claude-3.5-haiku",
+            "maxTokens": 256,
+            "temperature": 0.3
+          },
+          "system": "",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Тебе предоставлено сообщение для анализа: {message}  \r\nИзвлеки из этого сообщения полное имя доктора.  \r\nТвой ответ должен содержать только польное имя доктора и ничего больше."
+            }
+          ]
+        },
+        "6843e09483eec01669323c67": {
+          "settings": {
+            "useStructuredOutput": false,
+            "model": "claude-3.5-haiku",
+            "maxTokens": 256,
+            "temperature": 0.3
+          },
+          "system": "",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Тебе предоставлено сообщение для анализа: {last_utterance}\r\nЕсли в этом сообщении присутствует номер телефона, укажи одно единственное слово \"YESCHECK\".\r\nЕсли сообщение не содержит номер телефона — укажи \"NOCHECK\".\r\nТвой ответ должен быть либо \"YESCHECK\", либо \"NOCHECK\". Не добавляй ничего кроме этих слов."
+            }
+          ]
+        }
+      },
+      "apiTools": {},
+      "messages": {
+        "6841a618b08a650008337ef9": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "text": "{message}"
+                        },
+                        {
+                          "text": " "
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "6841a618b08a650008337efc": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Добро пожаловать в SmileDent! Чем могу помочь?"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        }
+      },
+      "integrationTools": {}
+    },
+    "_id": "6841a618f17719689e9c2a5d",
+    "updatedAt": "2025-06-08T15:55:28.373Z",
+    "publishedAt": "2024-05-05T11:18:08.282Z",
+    "domains": [
+      {
+        "id": "cla06iyr900b206pkh8d4ap8n",
+        "name": "Home",
+        "live": true,
+        "topicIDs": [
+          "64dbb6696a8fab0013dba194"
+        ],
+        "rootDiagramID": "64dbb6696a8fab0013dba194",
+        "updatedBy": 1654234,
+        "updatedAt": "2025-06-05T14:13:44.294Z"
+      }
+    ],
+    "projectID": "6841a618f17719689e9c2a5c",
+    "rootDiagramID": "64dbb6696a8fab0013dba194",
+    "templateDiagramID": "654b7c7bbacdd5499e841da2"
+  },
+  "diagrams": {
+    "64dbb6696a8fab0013dba195": {
+      "name": "Template Diagram",
+      "type": "TEMPLATE",
+      "zoom": 100,
+      "nodes": {},
+      "offsetX": 0,
+      "offsetY": 0,
+      "modified": 1699889061,
+      "creatorID": 1654234,
+      "variables": [],
+      "menuItems": [],
+      "_id": "6841a618f17719689e9c2a5f",
+      "diagramID": "64dbb6696a8fab0013dba195",
+      "versionID": "6841a618f17719689e9c2a5d"
+    },
+    "64dbb6696a8fab0013dba194": {
+      "name": "ROOT",
+      "type": "TOPIC",
+      "zoom": 49.99999999999998,
+      "nodes": {
+        "start00000000000000000000": {
+          "type": "start",
+          "data": {
+            "name": "Start",
+            "color": "#56b365",
+            "steps": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "661589cd9817f113e7f014e3",
+                  "id": "6032afcf359e8c14c06c0319",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -60.85,
+                          -704.69
+                        ]
+                      },
+                      {
+                        "point": [
+                          -12.65,
+                          -703.84
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "dynamic": []
+            },
+            "label": "Start"
+          },
+          "nodeID": "start00000000000000000000",
+          "coords": [
+            -125.47306657576806,
+            -726.6861503347151
+          ]
+        },
+        "654b7ca3fe41ef9fafe39058": {
+          "type": "captureV2",
+          "data": {
+            "name": "Capture",
+            "intentScope": "GLOBAL",
+            "capture": {
+              "type": "query",
+              "variable": "last_utterance"
+            },
+            "noReply": null,
+            "noMatch": null,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b7cabfe41ef9fafe39065",
+                  "id": "654b7ca3fe41ef9fafe39059",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          318.75,
+                          -567.64
+                        ]
+                      },
+                      {
+                        "point": [
+                          357.7,
+                          -567.64
+                        ]
+                      },
+                      {
+                        "point": [
+                          357.7,
+                          -881.26
+                        ]
+                      },
+                      {
+                        "point": [
+                          396.65,
+                          -881.26
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "else": {
+                  "type": "else",
+                  "target": null,
+                  "id": "654b7ca3fe41ef9fafe3905a"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b7ca3fe41ef9fafe39058",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "654b7cabfe41ef9fafe39062": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com/v1/threads",
+            "body": [],
+            "params": [],
+            "method": "POST",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer "
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "id",
+                "var": "threadID"
+              }
+            ],
+            "bodyType": "formData",
+            "selectedAction": "Make a POST Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b8364388d710c3ca76b6a",
+                  "id": "654b7cabfe41ef9fafe39063",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          728.05,
+                          -759.01
+                        ]
+                      },
+                      {
+                        "point": [
+                          774.22,
+                          -759.01
+                        ]
+                      },
+                      {
+                        "point": [
+                          774.22,
+                          -957.96
+                        ]
+                      },
+                      {
+                        "point": [
+                          820.39,
+                          -957.96
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654b7cabfe41ef9fafe39064"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b7cabfe41ef9fafe39062"
+        },
+        "654b7cabfe41ef9fafe39065": {
+          "type": "block",
+          "data": {
+            "name": "создание thread",
+            "steps": [
+              "654b7cabfe41ef9fafe39062"
+            ],
+            "color": ""
+          },
+          "nodeID": "654b7cabfe41ef9fafe39065",
+          "coords": [
+            561.6528654389401,
+            -908.256526260071
+          ]
+        },
+        "654b8364388d710c3ca76b68": {
+          "type": "block",
+          "data": {
+            "name": "отправка в thread",
+            "color": "",
+            "steps": [
+              "654b8364388d710c3ca76b6a"
+            ]
+          },
+          "nodeID": "654b8364388d710c3ca76b68",
+          "coords": [
+            986.789825656988,
+            -1036.5634445944472
+          ]
+        },
+        "654b8364388d710c3ca76b6a": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com/v1/threads/{{[threadID].threadID}}/messages",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [],
+            "method": "POST",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer "
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "{\n    \"role\": \"user\",\n    \"content\": \"{last_utterance}\"\n    }\n",
+            "mappings": [],
+            "bodyType": "rawInput",
+            "selectedAction": "Make a POST Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b8b35002e59f90aae6827",
+                  "id": "654b8364388d710c3ca76b6c",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1152.91,
+                          -869.83
+                        ]
+                      },
+                      {
+                        "point": [
+                          1209.07,
+                          -869.83
+                        ]
+                      },
+                      {
+                        "point": [
+                          1209.07,
+                          -1003.72
+                        ]
+                      },
+                      {
+                        "point": [
+                          1265.22,
+                          -1003.72
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654b8364388d710c3ca76b6b"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b8364388d710c3ca76b6a"
+        },
+        "654b8b35002e59f90aae6827": {
+          "type": "block",
+          "data": {
+            "name": "run ai",
+            "color": "",
+            "steps": [
+              "654b8b35002e59f90aae6829"
+            ]
+          },
+          "nodeID": "654b8b35002e59f90aae6827",
+          "coords": [
+            1430.2170263973355,
+            -1030.7162657397655
+          ]
+        },
+        "654b8b35002e59f90aae6829": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com/v1/threads/{{[threadID].threadID}}/runs",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [],
+            "method": "POST",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer "
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "{\n    \"assistant_id\": \"asst_g3c7fnzE6dJPMujA9AexnVJX\"\n    }\n",
+            "mappings": [
+              {
+                "path": "id",
+                "var": "runID"
+              }
+            ],
+            "bodyType": "rawInput",
+            "selectedAction": "Make a POST Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654c0c8f2190289c9f140ac8",
+                  "id": "654b8b35002e59f90aae682b",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1596.62,
+                          -866.27
+                        ]
+                      },
+                      {
+                        "point": [
+                          1760.42,
+                          -866.27
+                        ]
+                      },
+                      {
+                        "point": [
+                          1760.42,
+                          -728.25
+                        ]
+                      },
+                      {
+                        "point": [
+                          1924.22,
+                          -728.25
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654b8b35002e59f90aae682a",
+                  "data": {}
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b8b35002e59f90aae6829",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "654b8faf002e59f90aae6834": {
+          "type": "message",
+          "data": {
+            "messageID": "6841a618b08a650008337ef9",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "654b8faf002e59f90aae6835"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "name": "Text"
+          },
+          "nodeID": "654b8faf002e59f90aae6834"
+        },
+        "654b8faf002e59f90aae6836": {
+          "type": "block",
+          "data": {
+            "name": "сообщение доставлено",
+            "steps": [
+              "6842ae6b69f70688918530f3",
+              "654b8faf002e59f90aae6834",
+              "65523cab837e1926123e5b83"
+            ],
+            "color": ""
+          },
+          "nodeID": "654b8faf002e59f90aae6836",
+          "coords": [
+            569.7262982506084,
+            -632.3883176913891
+          ]
+        },
+        "654c0c8f2190289c9f140ac6": {
+          "type": "block",
+          "data": {
+            "name": "check run",
+            "color": "",
+            "steps": [
+              "654c0c8f2190289c9f140ac8"
+            ]
+          },
+          "nodeID": "654c0c8f2190289c9f140ac6",
+          "coords": [
+            2090.6187291989686,
+            -806.8528345109687
+          ]
+        },
+        "654c0c8f2190289c9f140ac8": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com//v1/threads/{{[threadID].threadID}}/runs/{{[runID].runID}}",
+            "body": [],
+            "params": [],
+            "method": "GET",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer "
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "status",
+                "var": "runstatus"
+              }
+            ],
+            "bodyType": "rawInput",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654f8c59483af69e7c6d3e7b",
+                  "id": "654c0c8f2190289c9f140aca",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1924.22,
+                          -642.4
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          1784.09,
+                          -642.4
+                        ]
+                      },
+                      {
+                        "point": [
+                          1784.09,
+                          -372.06
+                        ]
+                      },
+                      {
+                        "point": [
+                          1643.96,
+                          -372.06
+                        ],
+                        "reversed": true,
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654c0c8f2190289c9f140ac9",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          2142.01,
+                          -842.17
+                        ]
+                      },
+                      {
+                        "point": [
+                          2166.01,
+                          -842.17
+                        ]
+                      },
+                      {
+                        "point": [
+                          2166.01,
+                          -725.48
+                        ]
+                      },
+                      {
+                        "point": [
+                          2057.25,
+                          -725.48
+                        ]
+                      },
+                      {
+                        "point": [
+                          2057.25,
+                          -608.79
+                        ]
+                      },
+                      {
+                        "point": [
+                          2081.25,
+                          -608.79
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654c0c8f2190289c9f140ac8",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "654f8c59483af69e7c6d3e7b": {
+          "type": "ifV2",
+          "data": {
+            "name": "If",
+            "expressions": [
+              {
+                "type": null,
+                "name": "check if run is completed",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "completed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "if run is not completed",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "not_equal",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "completed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "or",
+                "name": "if run was not successful ",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "failed"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "failed"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "cancelled"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "none",
+              "pathName": "No match"
+            },
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "else": {
+                  "type": "else",
+                  "target": null,
+                  "id": "654f8c59483af69e7c6d3e7d"
+                }
+              },
+              "dynamic": [
+                {
+                  "type": "",
+                  "target": "654b9129002e59f90aae6842",
+                  "id": "654f8c59483af69e7c6d3e7c",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1311.44,
+                          -371.54
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          1156.89,
+                          -370.25
+                        ],
+                        "reversed": true
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "654f8ccb483af69e7c6d3e85",
+                  "type": "",
+                  "target": "654c0c8f2190289c9f140ac8",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1643.96,
+                          -317.31
+                        ]
+                      },
+                      {
+                        "point": [
+                          1784.09,
+                          -317.31
+                        ]
+                      },
+                      {
+                        "point": [
+                          1784.09,
+                          -728.25
+                        ]
+                      },
+                      {
+                        "point": [
+                          1924.22,
+                          -728.25
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "6550ea1cca31e52c0843f46e",
+                  "type": "",
+                  "target": "654c0c8f2190289c9f140ac8",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1643.96,
+                          -262.81
+                        ]
+                      },
+                      {
+                        "point": [
+                          1784.09,
+                          -262.81
+                        ]
+                      },
+                      {
+                        "point": [
+                          1784.09,
+                          -728.25
+                        ]
+                      },
+                      {
+                        "point": [
+                          1924.22,
+                          -728.25
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "nodeID": "654f8c59483af69e7c6d3e7b"
+        },
+        "654f8c59483af69e7c6d3e7e": {
+          "type": "block",
+          "data": {
+            "name": "статус",
+            "steps": [
+              "654f8c59483af69e7c6d3e7b"
+            ],
+            "color": ""
+          },
+          "nodeID": "654f8c59483af69e7c6d3e7e",
+          "coords": [
+            1477.5632109379542,
+            -450.6605342044187
+          ]
+        },
+        "65523cab837e1926123e5b83": {
+          "type": "captureV2",
+          "data": {
+            "name": "Capture",
+            "intentScope": "GLOBAL",
+            "capture": {
+              "type": "query",
+              "variable": "last_utterance"
+            },
+            "noReply": null,
+            "noMatch": null,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b8364388d710c3ca76b68",
+                  "id": "65523cab837e1926123e5b84",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          736.13,
+                          -425.09
+                        ]
+                      },
+                      {
+                        "point": [
+                          778.96,
+                          -425.09
+                        ]
+                      },
+                      {
+                        "point": [
+                          778.96,
+                          -1009.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          821.79,
+                          -1009.56
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "else": {
+                  "type": "else",
+                  "target": null,
+                  "id": "65523cab837e1926123e5b85"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "65523cab837e1926123e5b83",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "654b9129002e59f90aae6840": {
+          "type": "block",
+          "data": {
+            "name": "получения ответа в войсфлоу",
+            "color": "",
+            "steps": [
+              "654b9129002e59f90aae6842"
+            ]
+          },
+          "nodeID": "654b9129002e59f90aae6840",
+          "coords": [
+            990.7634753425426,
+            -449.1289781374076
+          ]
+        },
+        "654b9129002e59f90aae6842": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com/v1/threads/{{[threadID].threadID}}/messages",
+            "body": [],
+            "params": [],
+            "method": "GET",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer "
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "response.data[0].content[0].text",
+                "var": "message"
+              }
+            ],
+            "bodyType": "rawInput",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "6843e08c6753614904d02eea",
+                  "id": "654b9129002e59f90aae6844",
+                  "data": {}
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654b9129002e59f90aae6843"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b9129002e59f90aae6842",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "661589cd9817f113e7f014e1": {
+          "type": "message",
+          "data": {
+            "messageID": "6841a618b08a650008337efc",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "661589cd9817f113e7f014e2"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "name": "Text"
+          },
+          "nodeID": "661589cd9817f113e7f014e1"
+        },
+        "661589cd9817f113e7f014e3": {
+          "type": "block",
+          "data": {
+            "name": "приветствие",
+            "steps": [
+              "661589cd9817f113e7f014e1",
+              "654b7ca3fe41ef9fafe39058"
+            ],
+            "color": ""
+          },
+          "nodeID": "661589cd9817f113e7f014e3",
+          "coords": [
+            152.3521084769051,
+            -730.8420322274368
+          ]
+        },
+        "6842ae6b69f70688918530f3": {
+          "type": "code",
+          "data": {
+            "name": "",
+            "code": "message = message.replace(/\\【.*?\\】/g, '');",
+            "paths": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "6842ae6b69f70688918530f4"
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "6842ae6b69f70688918530f5"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "6842ae6b69f70688918530f3"
+        },
+        "6843e08c6753614904d02ee7": {
+          "type": "condition-v3",
+          "data": {
+            "name": "",
+            "noMatch": {
+              "path": false,
+              "repromptID": null,
+              "pathLabel": null
+            },
+            "condition": {
+              "type": "prompt",
+              "items": [
+                {
+                  "id": "cmblvmv2d007j357vqx86fmg9",
+                  "value": {
+                    "type": "prompt",
+                    "matchAll": true,
+                    "assertions": [
+                      {
+                        "rhs": [
+                          {
+                            "text": [
+                              "YESCHECK"
+                            ]
+                          }
+                        ],
+                        "key": "cmblvmv2e007k357vi74uh51a",
+                        "operation": "is"
+                      }
+                    ],
+                    "promptID": "6843e2a783eec01669323c6d"
+                  }
+                },
+                {
+                  "id": "cmblvnq8c0084357vmhv32c3z",
+                  "value": {
+                    "type": "prompt",
+                    "matchAll": true,
+                    "assertions": [
+                      {
+                        "rhs": [
+                          {
+                            "text": [
+                              "NOCHECK"
+                            ]
+                          }
+                        ],
+                        "key": "cmblvnq8c0085357vvo30i1mx",
+                        "operation": "is"
+                      }
+                    ],
+                    "promptID": "6843e2a783eec01669323c6d"
+                  }
+                }
+              ],
+              "promptID": "6843e2a783eec01669323c6d"
+            },
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "6843e08c6753614904d02ee8"
+                },
+                "cmblvmv2d007j357vqx86fmg9": {
+                  "id": "6843e1a46753614904d02eef",
+                  "target": "6843e2776753614904d02ef9",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          360.5,
+                          -234.99
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          299.46,
+                          -234.99
+                        ]
+                      },
+                      {
+                        "point": [
+                          299.46,
+                          -399.49
+                        ]
+                      },
+                      {
+                        "point": [
+                          238.43,
+                          -399.49
+                        ],
+                        "reversed": true,
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "cmblvnq8c0084357vmhv32c3z": {
+                  "id": "6843e1cc6753614904d02ef2",
+                  "target": "654b8faf002e59f90aae6836",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          693.3,
+                          -180.74
+                        ]
+                      },
+                      {
+                        "point": [
+                          758.73,
+                          -180.74
+                        ]
+                      },
+                      {
+                        "point": [
+                          758.73,
+                          -605.39
+                        ]
+                      },
+                      {
+                        "point": [
+                          734.73,
+                          -605.39
+                        ],
+                        "reversed": true,
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "6843e08c6753614904d02ee7"
+        },
+        "6843e08c6753614904d02eea": {
+          "type": "block",
+          "data": {
+            "name": "Проверка сообщений",
+            "steps": [
+              "6843e08c6753614904d02ee7"
+            ],
+            "color": ""
+          },
+          "nodeID": "6843e08c6753614904d02eea",
+          "coords": [
+            526.9013087240054,
+            -313.8362035096881
+          ]
+        },
+        "6843e2776753614904d02ef7": {
+          "type": "set-v3",
+          "data": {
+            "name": "",
+            "items": [
+              {
+                "id": "cmblvs1cl00ac357vhg6q3q00",
+                "type": "prompt",
+                "label": null,
+                "value": "6843e2a783eec01669323c6d",
+                "variableID": "6843e36bab1ac347dc49da60"
+              },
+              {
+                "id": "cmblvy9yt00c3357v6rmnr1d0",
+                "type": "prompt",
+                "label": null,
+                "value": "6843e3bc83eec01669323c70",
+                "variableID": "6843e4acab1ac347dc49db1d"
+              },
+              {
+                "id": "cmblw42zp00e0357v8nuaaxut",
+                "type": "prompt",
+                "label": null,
+                "value": "6843e4cc83eec01669323c76",
+                "variableID": "6843e503ab1ac347dc49db52"
+              },
+              {
+                "id": "cmblw5l7p00f3357v2k5jxbhr",
+                "type": "prompt",
+                "label": null,
+                "value": "6843e50f83eec01669323c79",
+                "variableID": "6843e548ab1ac347dc49db7f"
+              },
+              {
+                "id": "cmblw6zdp00g7357v0sfrrmur",
+                "type": "prompt",
+                "label": null,
+                "value": "6843e55183eec01669323c7f",
+                "variableID": "6843e582ab1ac347dc49dbc0"
+              }
+            ],
+            "label": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "6843e2776753614904d02ef8"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "6843e2776753614904d02ef7"
+        },
+        "6843e2776753614904d02ef9": {
+          "type": "block",
+          "data": {
+            "name": "Обработка",
+            "steps": [
+              "6843e2776753614904d02ef7",
+              "6843e73d6753614904d02f04"
+            ],
+            "color": ""
+          },
+          "nodeID": "6843e2776753614904d02ef9",
+          "coords": [
+            73.42792559989897,
+            -426.49089920331625
+          ]
+        },
+        "6843e73d6753614904d02f04": {
+          "type": "api-v2",
+          "data": {
+            "name": "",
+            "url": [
+              {
+                "text": [
+                  "https://hook.eu2.make.com/rhw8ju447g47nsqgnmd9zomv04bjktdm"
+                ]
+              }
+            ],
+            "headers": [
+              {
+                "id": "cmblwif2r00lf357vc9s2kwd3",
+                "key": "Content-Type",
+                "value": [
+                  {
+                    "text": [
+                      "application/json"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "httpMethod": "post",
+            "queryParameters": [],
+            "responseMappings": [],
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "654b8faf002e59f90aae6836",
+                  "id": "6843e73d6753614904d02f05",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          239.83,
+                          49.06
+                        ]
+                      },
+                      {
+                        "point": [
+                          322.28,
+                          49.06
+                        ]
+                      },
+                      {
+                        "point": [
+                          322.28,
+                          -605.39
+                        ]
+                      },
+                      {
+                        "point": [
+                          404.73,
+                          -605.39
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "id": "6843e90a6753614904d02f0b",
+                  "target": null,
+                  "type": "fail"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "body": {
+              "type": "form-data",
+              "formData": [
+                {
+                  "id": "cmblwqqug00nm357vrza9na8d",
+                  "key": "Doctor",
+                  "value": [
+                    {
+                      "text": [
+                        "",
+                        {
+                          "variableID": "6843e582ab1ac347dc49dbc0"
+                        },
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "cmblwqddt00ne357voqj7gd7y",
+                  "key": "Date",
+                  "value": [
+                    {
+                      "text": [
+                        "",
+                        {
+                          "variableID": "6843e503ab1ac347dc49db52"
+                        },
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "cmblwpp1900n6357v3vf08i25",
+                  "key": "Procidure",
+                  "value": [
+                    {
+                      "text": [
+                        "",
+                        {
+                          "variableID": "6843e548ab1ac347dc49db7f"
+                        },
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "cmblworse00mv357vsuav2cff",
+                  "key": "Phone",
+                  "value": [
+                    {
+                      "text": [
+                        "",
+                        {
+                          "variableID": "6843e36bab1ac347dc49da60"
+                        },
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "cmblwlxee00m9357vhz9n823x",
+                  "key": "name",
+                  "value": [
+                    {
+                      "text": [
+                        "",
+                        {
+                          "variableID": "6843e4acab1ac347dc49db1d"
+                        },
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "fallback": {
+              "path": true,
+              "pathLabel": "Failure"
+            }
+          },
+          "nodeID": "6843e73d6753614904d02f04"
+        }
+      },
+      "offsetX": 380.19063540051616,
+      "offsetY": 570.5819355017421,
+      "modified": 1699889061,
+      "creatorID": 1654234,
+      "variables": [],
+      "menuItems": [
+        {
+          "type": "NODE",
+          "sourceID": "start00000000000000000000"
+        }
+      ],
+      "menuNodeIDs": [],
+      "intentStepIDs": [],
+      "_id": "6841a618f17719689e9c2a60",
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "versionID": "6841a618f17719689e9c2a5d"
+    }
+  },
+  "flows": [],
+  "entities": [],
+  "entityVariants": [],
+  "intents": [
+    {
+      "id": "VF.YES",
+      "name": "VF.YES",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "VF.NO",
+      "name": "VF.NO",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "None",
+      "name": "None",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    }
+  ],
+  "utterances": [],
+  "requiredEntities": [],
+  "folders": [],
+  "responses": [
+    {
+      "id": "6841a618b08a650008337ef9",
+      "name": "",
+      "createdByID": 1654234,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6841a618b08a650008337efc",
+      "name": "",
+      "createdByID": 1654234,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    }
+  ],
+  "responseMessages": [
+    {
+      "id": "6841a618b08a650008337efb",
+      "discriminatorID": "6841a618b08a650008337efa",
+      "text": [
+        {
+          "text": [
+            "",
+            {
+              "variableID": "message"
+            },
+            " "
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-05T14:13:44.000Z"
+    },
+    {
+      "id": "6841a618b08a650008337efe",
+      "discriminatorID": "6841a618b08a650008337efd",
+      "text": [
+        {
+          "text": [
+            "Добро пожаловать в SmileDent! Чем могу помочь?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-06-05T14:13:44.000Z"
+    }
+  ],
+  "responseDiscriminators": [
+    {
+      "id": "6841a618b08a650008337efa",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "6841a618b08a650008337ef9",
+      "variantOrder": [
+        "6841a618b08a650008337efb"
+      ],
+      "createdAt": "2025-06-05T14:13:44.000Z"
+    },
+    {
+      "id": "6841a618b08a650008337efd",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "6841a618b08a650008337efc",
+      "variantOrder": [
+        "6841a618b08a650008337efe"
+      ],
+      "createdAt": "2025-06-05T14:13:44.000Z"
+    }
+  ],
+  "variables": [
+    {
+      "id": "sessions",
+      "name": "sessions",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The number of times a particular user has opened the app.",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's unique ID.",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "timestamp",
+      "name": "timestamp",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "UNIX timestamp  (number of seconds since January 1st, 1970 at UTC sh orin).",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "platform",
+      "name": "platform",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "locale",
+      "name": "locale",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "threadID",
+      "name": "threadID",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": null,
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "there",
+      "name": "there",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": null,
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "runID",
+      "name": "runID",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": null,
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "runstatus",
+      "name": "runstatus",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": null,
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "message",
+      "name": "message",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Sending a message. For example, \"Thank you for your reply. You can purchase various templates from the author @shorin_nikita\".",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "intent_confidence",
+      "name": "intent_confidence",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The confidence interval (measured as a value from 0 to 100) for the most shorin recently matched intent.",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "last_response",
+      "name": "last_response",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The agent's last response (text/speak) in a string.",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "last_event",
+      "name": "last_event",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "any",
+      "description": "The object containing the last event that the user client has triggered.",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "last_utterance",
+      "name": "last_utterance",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's last utterance in a text string.",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "vf_memory",
+      "name": "vf_memory",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+      "defaultValue": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-05T14:13:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e36bab1ac347dc49da60",
+      "name": "user_phone",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-07T06:59:55.000Z",
+      "updatedAt": "2025-06-07T06:59:55.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e4acab1ac347dc49db1d",
+      "name": "user_name",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-07T07:05:17.000Z",
+      "updatedAt": "2025-06-07T07:05:17.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e503ab1ac347dc49db52",
+      "name": "user_data",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-07T07:06:44.000Z",
+      "updatedAt": "2025-06-07T07:06:44.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e548ab1ac347dc49db7f",
+      "name": "user_procidure",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-07T07:07:53.000Z",
+      "updatedAt": "2025-06-07T07:07:53.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e582ab1ac347dc49dbc0",
+      "name": "user_doctor",
+      "createdByID": 1654234,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-06-07T07:08:50.000Z",
+      "updatedAt": "2025-06-07T07:08:50.000Z",
+      "updatedByID": 1654234
+    }
+  ],
+  "workflows": [
+    {
+      "id": "6841a618b08a650008337ef8",
+      "name": "Home",
+      "createdByID": 1654234,
+      "folderID": null,
+      "status": null,
+      "isStart": true,
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "assigneeID": null,
+      "description": null,
+      "createdAt": "2025-06-05T14:13:44.000Z",
+      "updatedAt": "2025-06-08T18:29:58.000Z",
+      "updatedByID": 1654234
+    }
+  ],
+  "attachments": [],
+  "cardButtons": [],
+  "prompts": [
+    {
+      "id": "6843e2a783eec01669323c6d",
+      "name": "Номер",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": "",
+      "settings": {
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "6843e2a783eec01669323c6e",
+        "6843e2a783eec01669323c6f"
+      ],
+      "createdAt": "2025-06-07T06:56:40.000Z",
+      "updatedAt": "2025-06-07T06:58:32.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e3bc83eec01669323c70",
+      "name": "Имя",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": "",
+      "settings": {
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "6843e3bc83eec01669323c71",
+        "6843e3bc83eec01669323c72"
+      ],
+      "createdAt": "2025-06-07T07:01:16.000Z",
+      "updatedAt": "2025-06-07T07:01:25.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e4cc83eec01669323c76",
+      "name": "Дата и время",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": "",
+      "settings": {
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "6843e4cc83eec01669323c77",
+        "6843e4cc83eec01669323c78"
+      ],
+      "createdAt": "2025-06-07T07:05:48.000Z",
+      "updatedAt": "2025-06-07T07:06:24.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e50f83eec01669323c79",
+      "name": "Процедура",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": "",
+      "settings": {
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "6843e50f83eec01669323c7a",
+        "6843e50f83eec01669323c7b"
+      ],
+      "createdAt": "2025-06-07T07:06:56.000Z",
+      "updatedAt": "2025-06-07T07:07:06.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e55183eec01669323c7f",
+      "name": "Доктор",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": "",
+      "settings": {
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "6843e55183eec01669323c80",
+        "6843e55183eec01669323c81"
+      ],
+      "createdAt": "2025-06-07T07:08:01.000Z",
+      "updatedAt": "2025-06-07T07:08:07.000Z",
+      "updatedByID": 1654234
+    },
+    {
+      "id": "6843e09483eec01669323c67",
+      "name": "Проверка сообщений",
+      "createdByID": 1654234,
+      "folderID": null,
+      "description": "",
+      "settings": {
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "6843e09483eec01669323c68",
+        "6843e09483eec01669323c69"
+      ],
+      "createdAt": "2025-06-07T06:47:49.000Z",
+      "updatedAt": "2025-06-07T06:51:47.000Z",
+      "updatedByID": 1654234
+    }
+  ],
+  "promptMessages": [
+    {
+      "id": "6843e55183eec01669323c80",
+      "promptID": "6843e55183eec01669323c7f",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              ""
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T07:08:01.000Z"
+    },
+    {
+      "id": "6843e55183eec01669323c81",
+      "promptID": "6843e55183eec01669323c7f",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "Тебе предоставлено сообщение для анализа: ",
+              {
+                "variableID": "message"
+              },
+              "  \r\nИзвлеки из этого сообщения полное имя доктора.  \r\nТвой ответ должен содержать только польное имя доктора и ничего больше.\r"
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T07:08:01.000Z"
+    },
+    {
+      "id": "6843e50f83eec01669323c7b",
+      "promptID": "6843e50f83eec01669323c79",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "Тебе предоставлено сообщение для анализа: ",
+              {
+                "variableID": "message"
+              },
+              "  \r\nИзвлеки из этого сообщения название процедуры.  \r\nТвой ответ должен содержать только название процедуры и ничего больше.\r\n"
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T07:06:56.000Z"
+    },
+    {
+      "id": "6843e09483eec01669323c68",
+      "promptID": "6843e09483eec01669323c67",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              ""
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T06:47:49.000Z"
+    },
+    {
+      "id": "6843e09483eec01669323c69",
+      "promptID": "6843e09483eec01669323c67",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "Тебе предоставлено сообщение для анализа: ",
+              {
+                "variableID": "last_utterance"
+              },
+              "\r\nЕсли в этом сообщении присутствует номер телефона, укажи одно единственное слово \"YESCHECK\".\r\nЕсли сообщение не содержит номер телефона — укажи \"NOCHECK\".\r\nТвой ответ должен быть либо \"YESCHECK\", либо \"NOCHECK\". Не добавляй ничего кроме этих слов."
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T06:47:49.000Z"
+    },
+    {
+      "id": "6843e2a783eec01669323c6e",
+      "promptID": "6843e2a783eec01669323c6d",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              ""
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T06:56:40.000Z"
+    },
+    {
+      "id": "6843e2a783eec01669323c6f",
+      "promptID": "6843e2a783eec01669323c6d",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "Тебе предоставлено сообщение для анализа: ",
+              {
+                "variableID": "message"
+              },
+              "  \r\nИзвлеки из этого сообщения номер телефона.  \r\nТвой ответ должен содержать только номер телефона и ничего больше."
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T06:56:40.000Z"
+    },
+    {
+      "id": "6843e3bc83eec01669323c71",
+      "promptID": "6843e3bc83eec01669323c70",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              ""
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T07:01:16.000Z"
+    },
+    {
+      "id": "6843e3bc83eec01669323c72",
+      "promptID": "6843e3bc83eec01669323c70",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "Тебе предоставлено сообщение для анализа: ",
+              {
+                "variableID": "message"
+              },
+              "  \r\nИзвлеки из этого сообщения имя и фамилию.  \r\nТвой ответ должен содержать только имя и фамилию и ничего больше."
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T07:01:16.000Z"
+    },
+    {
+      "id": "6843e4cc83eec01669323c78",
+      "promptID": "6843e4cc83eec01669323c76",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "Тебе предоставлено сообщение для анализа: ",
+              {
+                "variableID": "message"
+              },
+              "  \r\nИзвлеки из этого сообщения дату и время.  \r\nТвой ответ должен содержать только дату и время и ничего больше.\r\n"
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T07:05:48.000Z"
+    },
+    {
+      "id": "6843e4cc83eec01669323c77",
+      "promptID": "6843e4cc83eec01669323c76",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              ""
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T07:05:48.000Z"
+    },
+    {
+      "id": "6843e50f83eec01669323c7a",
+      "promptID": "6843e50f83eec01669323c79",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              ""
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-06-07T07:06:56.000Z"
+    }
+  ],
+  "events": [],
+  "agents": [],
+  "agentAPITools": [],
+  "agentPathTools": [],
+  "agentFunctionTools": [],
+  "agentIntegrationTools": [],
+  "agentPathToolVariables": [],
+  "apiTools": [],
+  "apiToolInputVariables": [],
+  "integrationTools": [],
+  "functions": [],
+  "functionPaths": [],
+  "functionVariables": [],
+  "project": {
+    "type": "chat",
+    "name": "Assistant zerocoder",
+    "image": "https://cm4-production-assets.s3.amazonaws.com/1713053142472-1chill.png",
+    "teamID": "LVkmDabAE2",
+    "members": [],
+    "privacy": "private",
+    "platform": "webchat",
+    "_version": 1.2,
+    "linkType": "STRAIGHT",
+    "creatorID": 1654234,
+    "updatedBy": 1654234,
+    "apiPrivacy": "public",
+    "platformData": {
+      "invocationName": "template project general"
+    },
+    "customThemes": [],
+    "aiAssistSettings": {
+      "aiPlayground": true
+    },
+    "_id": "6841a618f17719689e9c2a5c",
+    "updatedAt": "2025-06-07T15:51:13.172Z",
+    "devVersion": "6841a618f17719689e9c2a5d",
+    "liveVersion": "6841a618f17719689e9c2a5e"
+  },
+  "_version": "1.2",
+  "secrets": [],
+  "variableStates": []
+}
